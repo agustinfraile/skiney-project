@@ -17,9 +17,9 @@ return (
         <Nav.Link href="#features">Productos</Nav.Link>
         <Nav.Link href="#pricing">Nosotros</Nav.Link>
       </Nav>
-      <CartWidget />
 
     </Container>
+        <CartWidget />
   </Navbar>
 
 

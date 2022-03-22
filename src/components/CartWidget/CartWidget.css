@@ -14,6 +14,10 @@
     color: rgb(53, 53, 53);
 }
 
+.cartWidget-container a:focus {
+    color: rgb(53, 53, 53);
+}
+
 .cartWidget-container_before {
     height: 2em;
 }

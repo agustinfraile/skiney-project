@@ -5,13 +5,14 @@ import './CartWidget.css'
 
 
 import React from 'react'
+import { Nav } from 'react-bootstrap';
 
 const CartWidget = () => {
     return (
         <div className='cartWidget-container'>
-            <a href='#cart'>
-                <FontAwesomeIcon className='cartWidget-container_before'  icon = {faCartArrowDown} />
-            </a>
+            <Nav.Link href='#cart'>
+                <FontAwesomeIcon  className='cartWidget-container_before'  icon = {faCartArrowDown} />
+            </Nav.Link>
         </div>
     )
 }
