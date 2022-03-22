@@ -1,0 +1,6 @@
+.card-conteneor__count {
+    /* background-color: royalblue; */
+
+    display: flex;
+    justify-content: space-around;
+}

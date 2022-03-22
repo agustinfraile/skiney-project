@@ -1,6 +1,6 @@
 import React from 'react'
-import { Button, Card } from 'react-bootstrap'
-import ItemCount from '../ItemCount/ItemCount'
+import { Card } from 'react-bootstrap'
+import ItemListContainer from '../ItemListContainer/ItemListContainer'
 
 import './Card.css'
 
@@ -16,7 +16,7 @@ return (
                 the card's content.
             </Card.Text>
         </Card.Body>
-        <ItemCount />
+        <ItemListContainer />
     </Card>
 </div>
 )
