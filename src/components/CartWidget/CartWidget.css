@@ -1,0 +1,19 @@
+.cartWidget-container {
+    /* background-color: royalblue; */
+    
+    width: 5em;
+    height: auto;
+}
+
+.cartWidget-container a {
+    text-decoration: none;
+    color: #000;
+}
+
+.cartWidget-container a:hover {
+    color: rgb(53, 53, 53);
+}
+
+.cartWidget-container_before {
+    height: 2em;
+}
