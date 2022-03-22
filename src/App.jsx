@@ -9,9 +9,10 @@ function App() {
   return (
     <div className="App">
       <NavBar />
-      {/* <TituloApp /> */}
+      <TituloApp />
     </div>
   )
 }
+
 
 export default App
