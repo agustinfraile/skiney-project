@@ -1,14 +1,36 @@
-import React from 'react'
-import ItemCount from '../ItemCount/ItemCount'
+import React, { useEffect, useState } from 'react'
+import { Spinner } from 'react-bootstrap'
+import { getFetch } from '../../helpers/getFetch'
+import ItemList from '../ItemList/ItemList'
 
 
 import './ItemListContainer.css'
 
 const ItemListContainer = () => {
 
+    
+    // simulacion backend
+    
+    const [productos, setProductos] = useState([])
+    const [loading, setLoading] = useState(true)
+
+    useEffect(() => {
+
+        // llamada a la api
+        getFetch
+            .then( (respuesta) => setProductos(respuesta) )
+            .catch( error => console.log(error) )
+            .finally( () => setLoading(false) )
+    }, []);
+    
+
     return (
         <>
-            <ItemCount initial = {1} stock = {4}/>
+            {/* condicional ternario para cuando esta cargando los productos */}
+            {   loading ? <Spinner animation="border" role="status"> <span className="visually-hidden">Loading...</span> </Spinner> 
+                :
+                <ItemList />
+            }
         </>
     )   
 }
