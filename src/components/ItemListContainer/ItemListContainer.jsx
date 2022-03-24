@@ -23,6 +23,7 @@ const ItemListContainer = () => {
             .finally( () => setLoading(false) )
     }, []);
     
+    console.log(productos);
 
     return (
         <>

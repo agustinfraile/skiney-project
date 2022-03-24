@@ -2,4 +2,17 @@
     margin: 50px 0px;
     background-color: rgb(241, 241, 241);
     box-shadow: 2px 3px 5px 2px #ccc;
+
+}
+
+.card_body--image {
+    background-color: rgb(221, 190, 190);
+    width: 100%;
+    height: auto;
+}
+
+.card_body--detail {
+    width: 100%;
+    height: auto;
+    
 }
