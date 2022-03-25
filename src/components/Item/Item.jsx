@@ -9,7 +9,7 @@ const Item = ({prod}) => {
 return (
         <>
 
-                {/* datos de la card */}
+            {/* datos de la card */}
             <Card.Body className='card_body'>
                 <Card.Img  variant="top" src= {prod.foto} />
                 
