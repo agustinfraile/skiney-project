@@ -1,7 +1,5 @@
-import React from 'react'
 import { Card } from 'react-bootstrap'
 import ItemListContainer from '../containers/ItemListContainer/ItemListContainer'
-import ItemDetailContainer from '../ItemDetailContainer/ItemDetailContainer'
 
 import './Card.css'
 
