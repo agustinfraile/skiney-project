@@ -1,7 +1,7 @@
-import './App.css'
 import TituloApp from './components/TituloApp/TituloApp'
 import NavBar from './components/NavBar/NavBar'
 import Cards from './components/Card/Cards'
+import './App.css'
 
 function App() {
 
