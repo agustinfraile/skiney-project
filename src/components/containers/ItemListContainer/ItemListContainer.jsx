@@ -23,12 +23,8 @@ const ItemListContainer = () => {
             .finally( () => setLoading(false) )
     }, []);
     
-<<<<<<< HEAD:src/components/ItemListContainer/ItemListContainer.jsx
     console.log(productos);
 
-=======
-    // console.log(productos)
->>>>>>> rama2:src/components/containers/ItemListContainer/ItemListContainer.jsx
     return (
         <>
             {/* condicional ternario para cuando esta cargando los productos */}
