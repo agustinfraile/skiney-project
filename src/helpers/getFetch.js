@@ -30,3 +30,18 @@ export const getFetch = new Promise( (res, rej) => {
         rej('404 not found');
     }
 } )
+
+
+export const getFetchName = new Promise( (res, rej) => {
+
+    let url = 'skiney.com';
+
+    if(url === 'skiney.com') {
+        setTimeout( () => {
+            res(productos)
+        }, 2000);
+    } else {
+        rej('404 not found');
+    }
+} )
+

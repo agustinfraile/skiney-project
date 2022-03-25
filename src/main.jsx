@@ -5,6 +5,8 @@ import App from './App'
 
 // agregando react-bootstrap
 import 'bootstrap/dist/css/bootstrap.min.css';
+// agregando semantic ui
+// import 'semantic-ui-css/semantic.min.css'
 
 ReactDOM.render(
   <React.StrictMode>
