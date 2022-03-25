@@ -18,12 +18,13 @@ return (
 
                     <ItemDetailContainer />
                     {/* contador y carrito */}
-                    <ItemCount initial = {1} stock = {4}/>
                 </Card.Body>
-                
+                <ItemCount initial = {1} stock = {4}/>
+        
             </Card.Body>
         </>
     )
 }
 
 export default Item
+
