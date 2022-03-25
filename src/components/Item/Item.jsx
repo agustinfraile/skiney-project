@@ -1,6 +1,7 @@
 import React from 'react'
 import { Card } from 'react-bootstrap'
 import ItemCount from '../ItemCount/ItemCount'
+import ItemDetailContainer from '../ItemDetailContainer/ItemDetailContainer';
 
 import './Item.css';
 
@@ -15,6 +16,11 @@ return (
                 <Card.Body>
                     <Card.Title>{ prod.nombre }</Card.Title>
                     <Card.Text>{ prod.detalle }</Card.Text>
+<<<<<<< HEAD
+=======
+                    <ItemDetailContainer />
+                </Card.Body>
+>>>>>>> rama2
 
                     {/* contador y carrito */}
                     <ItemCount initial = {1} stock = {4}/>
