@@ -16,7 +16,7 @@ return (
                 <Card.Body>
                     <Card.Title>{ prod.nombre }</Card.Title>
                     <Card.Text>{ prod.detalle }</Card.Text>
-
+                    <ItemDetailContainer />
                     {/* contador y carrito */}
                     <ItemCount initial = {1} stock = {4}/>
                 </Card.Body>
