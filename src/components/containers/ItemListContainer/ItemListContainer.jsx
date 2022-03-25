@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { Spinner } from 'react-bootstrap'
-import { getFetch } from '../../helpers/getFetch'
-import ItemList from '../ItemList/ItemList'
+import { getFetch } from '../../../helpers/getFetch'
+import ItemList from '../../ItemList/ItemList'
 
 
 import './ItemListContainer.css'
@@ -23,13 +23,13 @@ const ItemListContainer = () => {
             .finally( () => setLoading(false) )
     }, []);
     
-
+    // console.log(productos)
     return (
         <>
             {/* condicional ternario para cuando esta cargando los productos */}
             {   loading ? <Spinner animation="border" role="status"> <span className="visually-hidden">Loading...</span> </Spinner> 
                 :
-                <ItemList />
+                <ItemList productos = { productos } />
             }
         </>
     )   

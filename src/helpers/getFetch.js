@@ -25,7 +25,7 @@ export const getFetch = new Promise( (res, rej) => {
     if(url === 'skiney.com') {
         setTimeout( () => {
             res(productos)
-        }, 3000);
+        }, 500);
     } else {
         rej('404 not found');
     }

@@ -1,10 +1,9 @@
 import React from 'react'
-import { productos } from '../../helpers/getFetch'
 import Item from '../Item/Item'
 
-const ItemList = () => {
+const ItemList = ({ productos }) => {
     return (
-        productos.map( ( prod, index ) => <Item key = { index } prod = { prod } />)
+        productos.map( ( prod ) => <Item key = { prod.id } prod = { prod } />)
     )
 }
 

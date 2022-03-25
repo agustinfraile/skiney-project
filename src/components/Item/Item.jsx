@@ -1,6 +1,7 @@
 import React from 'react'
 import { Card } from 'react-bootstrap'
 import ItemCount from '../ItemCount/ItemCount'
+import ItemDetailContainer from '../ItemDetailContainer/ItemDetailContainer';
 
 import './Item.css';
 
@@ -14,6 +15,7 @@ return (
                 <Card.Body>
                     <Card.Title>{ prod.nombre }</Card.Title>
                     <Card.Text>{ prod.detalle }</Card.Text>
+                    <ItemDetailContainer />
                 </Card.Body>
 
                 {/* contador y carrito */}
