@@ -1,16 +1,34 @@
 import TituloApp from './components/TituloApp/TituloApp'
 import NavBar from './components/NavBar/NavBar'
-import Cards from './components/Card/Cards'
+import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom'
+import ItemListContainer from './components/containers/ItemListContainer/ItemListContainer'
+
 import './App.css'
+import ItemDetailContainer from './components/containers/ItemDetailContainer/ItemDetailContainer'
+import CartWidget from './components/CartWidget/CartWidget'
 
 function App() {
 
   return (
-    <div className="App">
-      <NavBar />
-      <TituloApp />
-      <Cards />
-    </div>
+
+      <BrowserRouter >
+          <div className="App">
+            <NavBar />
+            <TituloApp />
+
+          <Routes >
+
+            <Route path='/' element = { <ItemListContainer/> } />
+            <Route path='/categoria/:categoriaId' element = { <ItemListContainer/> } />
+            <Route path='/detalle/:detalleId' element = { <ItemDetailContainer /> } />
+            <Route path='/cart' element = { <CartWidget /> } />
+            <Route path='/*' element = { <Navigate to='/' replace /> } />
+
+          </Routes>
+
+          </div>
+      </BrowserRouter>
+  
   )
 }
 

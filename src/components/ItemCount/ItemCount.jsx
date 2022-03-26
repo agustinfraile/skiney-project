@@ -31,9 +31,9 @@ const ItemCount = ({initial, stock}) => {
     const onAdd = (cantidad) => {
         // condicional para que no se pueda seguir aumentado cuando llegue al stock
         if(cantidad > 1) {
-            console.log(`Seleccionaste ${cantidad} productos`);
+            alert(`Seleccionaste ${cantidad} productos`);
         } else {
-            console.log(`Seleccionaste ${cantidad} producto`);
+            alert(`Seleccionaste ${cantidad} producto`);
         }
     }
 

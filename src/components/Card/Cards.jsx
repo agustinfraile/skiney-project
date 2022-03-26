@@ -1,4 +1,5 @@
-import { Card } from 'react-bootstrap'
+
+import ItemDetailContainer from '../containers/ItemDetailContainer/ItemDetailContainer'
 import ItemListContainer from '../containers/ItemListContainer/ItemListContainer'
 
 import './Card.css'
@@ -6,7 +7,8 @@ import './Card.css'
 const Cards = () => {
 return (
     <div className='card-center'>
-        <ItemListContainer/>    
+        <ItemListContainer/> 
+        <ItemDetailContainer />
     </div>
 )
 }

@@ -1,5 +1,6 @@
 import React from 'react'
-import { Container, Nav, Navbar } from 'react-bootstrap'
+import { Container, Nav, Navbar, NavDropdown } from 'react-bootstrap'
+import { NavLink } from 'react-router-dom'
 import CartWidget from '../CartWidget/CartWidget'
 
 
@@ -11,15 +12,42 @@ const NavBar = () => {
 return (
 <div>
   <Navbar bg="light" variant="light">
+
     <Container>
-      <Navbar.Brand href="#home">Logo</Navbar.Brand>
+      
+      <NavLink to="/">
+        <Navbar.Brand to="/">Logo</Navbar.Brand>
+      </NavLink>
+      
       <Nav className="me-auto">
-        <Nav.Link href="#features">Productos</Nav.Link>
-        <Nav.Link href="#pricing">Nosotros</Nav.Link>
+        
+        <NavDropdown title="Productos" id='collasible-nav-dropdown'>
+
+          <NavLink to="categoria/limpieza">
+              Limpieza
+          </NavLink>
+
+          <NavLink to="categoria/gel">
+              Gel
+          </NavLink>
+
+        </NavDropdown>
+        
+        
+        <NavLink to="nosotros">
+          <Nav.Link>
+            Nosotros
+          </Nav.Link>
+        </NavLink>
+
       </Nav>
 
     </Container>
+
+    <NavLink to="cart">
         <CartWidget />
+    </NavLink>
+
   </Navbar>
 
 
