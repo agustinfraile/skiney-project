@@ -3,21 +3,24 @@ export const productos = [
         nombre: 'Limpieza', 
         foto: 'https://i.ibb.co/sH1R4HN/ldh-limpieza-emulsion-Peque-a.jpg', 
         categoria: 'limpieza',
-        detalle: 'Suave emulsión con un sistema microemulsionado de higiene profunda que remueve eficazmente el maquillaje y las impurezas. '
+        detalle: 'Suave emulsión con un sistema microemulsionado de higiene profunda que remueve eficazmente el maquillaje y las impurezas. ',
+        stock: 2,
     },
     {
         id: '2', 
         nombre: 'Detoxify gel limpieza', 
         foto: 'https://i.ibb.co/rQ8Mb4V/ldh-detoxify-gel-limpieza-Peque-a.jpg', 
         categoria: 'gel',
-        detalle: 'Gel jabonoso con capacidad de adsorción de toxinas.'
+        detalle: 'Gel jabonoso con capacidad de adsorción de toxinas.',
+        stock: 5,
     },
     {
         id: '3', 
         nombre: 'Hidrosomas  ', 
         foto: 'https://i.ibb.co/YjMW0ng/ldh-hidrosomas-Peque-a.jpg',
         categoria: 'gel',
-        detalle: 'Gel liposomado de óptima penetración que ayuda a reparar la barrera epicutánea porque hidrata y retiene la humedad en forma prolongada.'
+        detalle: 'Gel liposomado de óptima penetración que ayuda a reparar la barrera epicutánea porque hidrata y retiene la humedad en forma prolongada.',
+        stock: 7,
     }
 ]
 

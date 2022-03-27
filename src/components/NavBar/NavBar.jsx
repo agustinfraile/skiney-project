@@ -2,6 +2,7 @@ import React from 'react'
 import { Container, Nav, Navbar, NavDropdown } from 'react-bootstrap'
 import { NavLink } from 'react-router-dom'
 import CartWidget from '../CartWidget/CartWidget'
+import Logo from '../Logo/Logo'
 
 
 
@@ -14,23 +15,23 @@ return (
   <Navbar bg="light" variant="light">
 
     <Container>
-      
       <NavLink to="/">
-        <Navbar.Brand to="/">Logo</Navbar.Brand>
+        {/* <Navbar.Brand to="/">Logo</Navbar.Brand> */}
+        <Logo />
       </NavLink>
       
       <Nav className="me-auto">
         
-        <NavDropdown title="Productos" id='collasible-nav-dropdown'>
+
+
+        <NavDropdown title="Productos" id="basic-nav-dropdown">
+          <NavLink to="categoria/gel">
+            <NavDropdown.Item href="#action/3.1">Gel</NavDropdown.Item>
+          </NavLink>
 
           <NavLink to="categoria/limpieza">
-              Limpieza
+            <NavDropdown.Item href="#action/3.2">Limpieza</NavDropdown.Item>
           </NavLink>
-
-          <NavLink to="categoria/gel">
-              Gel
-          </NavLink>
-
         </NavDropdown>
         
         

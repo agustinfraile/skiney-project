@@ -11,7 +11,7 @@ const ItemCount = ({initial, stock}) => {
 
     // funcion que me permite sumar el stock
     const handleCounterUp = () => {
-        if(count > stock) {
+        if(count >= stock) {
             alert('No hay mas stock');
         } else {
             setCount(count+1);

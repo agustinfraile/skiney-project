@@ -20,6 +20,7 @@ function App() {
 
             <Route path='/' element = { <ItemListContainer/> } />
             <Route path='/categoria/:categoriaId' element = { <ItemListContainer/> } />
+            <Route path='/categoria/:categoriaId/detalle/:detalleId' element = { <ItemDetailContainer /> } />
             <Route path='/detalle/:detalleId' element = { <ItemDetailContainer /> } />
             <Route path='/cart' element = { <CartWidget /> } />
             <Route path='/*' element = { <Navigate to='/' replace /> } />
