@@ -11,6 +11,7 @@ const ItemDetail = ({ producto }) => {
             <Card.Img variant="top" src= {producto.foto} />
             <Card.Title>{ producto.nombre }</Card.Title>
             <Card.Text>{ producto.detalle }</Card.Text>
+            <Card.Title>{ `$${producto.precio}` }</Card.Title>
 
             {/* contador y carrito */}
             <ItemCount initial = {1} stock = {producto.stock}/>

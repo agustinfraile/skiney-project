@@ -6,6 +6,7 @@ import ItemListContainer from './components/containers/ItemListContainer/ItemLis
 import './App.css'
 import ItemDetailContainer from './components/containers/ItemDetailContainer/ItemDetailContainer'
 import CartWidget from './components/CartWidget/CartWidget'
+import Cart from './components/Cart/Cart'
 
 function App() {
 
@@ -22,7 +23,7 @@ function App() {
             <Route path='/categoria/:categoriaId' element = { <ItemListContainer/> } />
             <Route path='/categoria/:categoriaId/detalle/:detalleId' element = { <ItemDetailContainer /> } />
             <Route path='/detalle/:detalleId' element = { <ItemDetailContainer /> } />
-            <Route path='/cart' element = { <CartWidget /> } />
+            <Route path='/cart' element = { <Cart /> } />
             <Route path='/*' element = { <Navigate to='/' replace /> } />
 
           </Routes>

@@ -3,6 +3,7 @@ import React from 'react';
 import { Button, Card } from 'react-bootstrap';
 
 import './ItemCount.css'
+import { NavLink } from 'react-router-dom';
 
 const ItemCount = ({initial, stock}) => {
 
@@ -31,9 +32,9 @@ const ItemCount = ({initial, stock}) => {
     const onAdd = (cantidad) => {
         // condicional para que no se pueda seguir aumentado cuando llegue al stock
         if(cantidad > 1) {
-            alert(`Seleccionaste ${cantidad} productos`);
+            console.log(`Seleccionaste ${cantidad} productos`);
         } else {
-            alert(`Seleccionaste ${cantidad} producto`);
+            console.log(`Seleccionaste ${cantidad} producto`);
         }
     }
 
@@ -50,7 +51,10 @@ const ItemCount = ({initial, stock}) => {
                 <Button onClick={ handleCounterUp }>+</Button>
             </Card.Body>
             <Card.Body>
-                <Button onClick={ AgregarCarrito } href='#cart' variant="primary">Agregar al carrito</Button>
+                <NavLink to="/cart">
+                    <Button onClick={ AgregarCarrito } variant="primary">Agregar al carrito</Button>
+                </NavLink>
+            
             </Card.Body>
         </>
     )

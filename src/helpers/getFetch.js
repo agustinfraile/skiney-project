@@ -5,6 +5,7 @@ export const productos = [
         categoria: 'limpieza',
         detalle: 'Suave emulsión con un sistema microemulsionado de higiene profunda que remueve eficazmente el maquillaje y las impurezas. ',
         stock: 2,
+        precio: 111,
     },
     {
         id: '2', 
@@ -13,6 +14,7 @@ export const productos = [
         categoria: 'gel',
         detalle: 'Gel jabonoso con capacidad de adsorción de toxinas.',
         stock: 5,
+        precio: 222,
     },
     {
         id: '3', 
@@ -21,6 +23,7 @@ export const productos = [
         categoria: 'gel',
         detalle: 'Gel liposomado de óptima penetración que ayuda a reparar la barrera epicutánea porque hidrata y retiene la humedad en forma prolongada.',
         stock: 7,
+        precio: 333,
     }
 ]
 
