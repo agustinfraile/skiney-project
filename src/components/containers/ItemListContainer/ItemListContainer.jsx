@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import { Spinner } from 'react-bootstrap'
+import { useParams } from 'react-router-dom'
 import { getFetch } from '../../../helpers/getFetch'
+// import ItemCount from '../../ItemCount/ItemCount'
 import ItemList from '../../ItemList/ItemList'
 
 
@@ -13,18 +15,35 @@ const ItemListContainer = () => {
     
     const [productos, setProductos] = useState([])
     const [loading, setLoading] = useState(true)
+    
+    const { categoriaId } = useParams()
+    // console.log(categoriaId)
 
     useEffect(() => {
-
-        // llamada a la api
-        getFetch
-            .then( (respuesta) => setProductos(respuesta) )
+        if (categoriaId) {
+            // llamada a la api
+            getFetch
+            .then( (respuesta) => setProductos(respuesta.filter( product => product.categoria === categoriaId )) )
             .catch( error => console.log(error) )
             .finally( () => setLoading(false) )
-    }, []);
+            
+        } else {
+            
+            // llamada a la api
+            getFetch
+                .then( (respuesta) => setProductos(respuesta) )
+                .catch( error => console.log(error) )
+                .finally( () => setLoading(false) )
+        }
+    }, [categoriaId]);
     
+<<<<<<< HEAD
     console.log(productos);
 
+=======
+
+    // console.log(productos)
+>>>>>>> rama3
     return (
         <>
             {/* condicional ternario para cuando esta cargando los productos */}
@@ -32,6 +51,8 @@ const ItemListContainer = () => {
                 :
                 <ItemList productos = { productos } />
             }
+            {/* contador y carrito */}
+            {/* <ItemCount initial = {1} stock = {4}/> */}
         </>
     )   
 }

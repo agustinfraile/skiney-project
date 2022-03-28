@@ -1,6 +1,8 @@
 import React from 'react'
-import { Container, Nav, Navbar } from 'react-bootstrap'
+import { Container, Nav, Navbar, NavDropdown } from 'react-bootstrap'
+import { NavLink } from 'react-router-dom'
 import CartWidget from '../CartWidget/CartWidget'
+import Logo from '../Logo/Logo'
 
 
 
@@ -11,15 +13,42 @@ const NavBar = () => {
 return (
 <div>
   <Navbar bg="light" variant="light">
+
     <Container>
-      <Navbar.Brand href="#home">Logo</Navbar.Brand>
+      <NavLink to="/">
+        {/* <Navbar.Brand to="/">Logo</Navbar.Brand> */}
+        <Logo />
+      </NavLink>
+      
       <Nav className="me-auto">
-        <Nav.Link href="#features">Productos</Nav.Link>
-        <Nav.Link href="#pricing">Nosotros</Nav.Link>
+        
+
+
+        <NavDropdown title="Productos" id="basic-nav-dropdown">
+          <NavLink to="categoria/gel">
+            <NavDropdown.Item href="#action/3.1">Gel</NavDropdown.Item>
+          </NavLink>
+
+          <NavLink to="categoria/limpieza">
+            <NavDropdown.Item href="#action/3.2">Limpieza</NavDropdown.Item>
+          </NavLink>
+        </NavDropdown>
+        
+        
+        <NavLink to="nosotros">
+          <Nav.Link>
+            Nosotros
+          </Nav.Link>
+        </NavLink>
+
       </Nav>
 
     </Container>
+
+    <NavLink to="cart">
         <CartWidget />
+    </NavLink>
+
   </Navbar>
 
 

@@ -3,6 +3,7 @@ import React from 'react';
 import { Button, Card } from 'react-bootstrap';
 
 import './ItemCount.css'
+import { NavLink } from 'react-router-dom';
 
 const ItemCount = ({initial, stock}) => {
 
@@ -11,7 +12,7 @@ const ItemCount = ({initial, stock}) => {
 
     // funcion que me permite sumar el stock
     const handleCounterUp = () => {
-        if(count > stock) {
+        if(count >= stock) {
             alert('No hay mas stock');
         } else {
             setCount(count+1);
@@ -50,7 +51,10 @@ const ItemCount = ({initial, stock}) => {
                 <Button onClick={ handleCounterUp }>+</Button>
             </Card.Body>
             <Card.Body>
-                <Button onClick={ AgregarCarrito } href='#cart' variant="primary">Agregar al carrito</Button>
+                <NavLink to="/cart">
+                    <Button onClick={ AgregarCarrito } variant="primary">Agregar al carrito</Button>
+                </NavLink>
+            
             </Card.Body>
         </>
     )
