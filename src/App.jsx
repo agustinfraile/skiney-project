@@ -1,17 +1,26 @@
+// componentes
 import TituloApp from './components/TituloApp/TituloApp'
 import NavBar from './components/NavBar/NavBar'
-import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom'
 import ItemListContainer from './components/containers/ItemListContainer/ItemListContainer'
-
-import './App.css'
 import ItemDetailContainer from './components/containers/ItemDetailContainer/ItemDetailContainer'
-import CartWidget from './components/CartWidget/CartWidget'
 import Cart from './components/Cart/Cart'
+
+// react-router-dom
+import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom'
+
+// context
+import { CartContext } from './context/CartContext'
+
+
+// estilos
+import './App.css'
 
 function App() {
 
   return (
+    <CartContext.Provider value={{
 
+    }}>
       <BrowserRouter >
           <div className="App">
             <NavBar />
@@ -30,6 +39,8 @@ function App() {
 
           </div>
       </BrowserRouter>
+    </CartContext.Provider>
+
   
   )
 }

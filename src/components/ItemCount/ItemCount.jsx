@@ -50,11 +50,15 @@ const ItemCount = ({initial, stock}) => {
                 <label>{ count }</label>
                 <Button onClick={ handleCounterUp }>+</Button>
             </Card.Body>
+
+            <Card.Body>
+                <Button onClick={ AgregarCarrito } variant="primary">Agregar al carrito</Button>
+            </Card.Body>
+
             <Card.Body>
                 <NavLink to="/cart">
-                    <Button onClick={ AgregarCarrito } variant="primary">Agregar al carrito</Button>
+                    <Button variant="primary">Ir a pagar</Button>    
                 </NavLink>
-            
             </Card.Body>
         </>
     )

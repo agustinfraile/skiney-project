@@ -1,9 +1,11 @@
-import { Button, Card } from 'react-bootstrap'
-import ItemCount from '../ItemCount/ItemCount'
-import ItemDetailContainer from '../containers/ItemDetailContainer/ItemDetailContainer';
-
-import './Item.css';
+// react-router-dom
 import { NavLink } from 'react-router-dom';
+
+// react-bootstrap 
+import { Button, Card } from 'react-bootstrap'
+
+// estilos
+import './Item.css';
 
 const Item = ({prod}) => {
 return (
@@ -15,19 +17,16 @@ return (
 
                 <Card.Body>
                     <Card.Title>{ prod.nombre }</Card.Title>
-                    {/* <Card.Text>{ prod.detalle }</Card.Text> */}
 
-                    {/* <ItemDetailContainer /> */}
+                    <Card.Text>
+                        ${prod.precio}
+                    </Card.Text>
 
                     <NavLink to = { `detalle/${prod.id}` }>
                         <Button variant="outline-primary">Ver producto</Button>
                     </NavLink>
 
-
                 </Card.Body>
-
-                {/* contador y carrito */}
-                {/* <ItemCount initial = {1} stock = {4}/> */}
                 
             </Card.Body>
         </>
