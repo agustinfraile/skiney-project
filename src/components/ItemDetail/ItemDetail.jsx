@@ -14,7 +14,7 @@ const ItemDetail = ({ producto }) => {
             <Card.Title>{ `$${producto.precio}` }</Card.Title>
 
             {/* contador y carrito */}
-            <ItemCount initial = {1} stock = {producto.stock}/>
+            <ItemCount initial = {1} stock = {producto.stock}  />
         </div>
     )
 }

@@ -36,6 +36,8 @@ const ItemCount = ({initial, stock}) => {
         } else {
             console.log(`Seleccionaste ${cantidad} producto`);
         }
+
+        setCount(cantidad)
     }
 
     // funcion para mostrar por consola la cantidad de productos que seleccione
