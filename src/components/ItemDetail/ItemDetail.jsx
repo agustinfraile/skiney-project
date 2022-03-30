@@ -1,8 +1,12 @@
 import { useState } from "react"
-import { Card } from "react-bootstrap"
+
 import ItemCount from "../ItemCount/ItemCount"
 
+import { useCartContext } from "../../context/CartContext"
+
+import { Card } from "react-bootstrap"
 import './ItemDetail.css'
+
 
 const ItemDetail = ({ producto }) => {
 
@@ -10,7 +14,7 @@ const ItemDetail = ({ producto }) => {
     console.log(count)
 
 
-    
+    const { agregarACart, cartList } = useCartContext()
 
 
     const onAdd = (cantidad) => {
@@ -22,7 +26,10 @@ const ItemDetail = ({ producto }) => {
         }
 
         setCount(cantidad)
+        agregarACart( { ...producto, cantidad: cantidad } )
     }
+
+    console.log(cartList)
 
     return (
         <div className="card-detalle">
