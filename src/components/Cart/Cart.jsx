@@ -19,7 +19,7 @@ const Cart = () => {
             </Card.Body>
 
             <div>
-                cart
+                
                 {/* { cartList.map( pro => <li> {pro.nombre} </li> ) } */}
             </div>
         </div>

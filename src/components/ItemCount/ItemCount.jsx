@@ -5,7 +5,7 @@ import { Button, Card } from 'react-bootstrap';
 import './ItemCount.css'
 import { NavLink } from 'react-router-dom';
 
-const ItemCount = ({initial, stock}) => {
+const ItemCount = ({initial, stock, onAdd}) => {
 
     // destructuring del usestate
     const [count, setCount] = useState(initial);
@@ -29,21 +29,11 @@ const ItemCount = ({initial, stock}) => {
         }
     }
     
-    const onAdd = (cantidad) => {
-        // condicional para que no se pueda seguir aumentado cuando llegue al stock
-        if(cantidad > 1) {
-            console.log(`Seleccionaste ${cantidad} productos`);
-        } else {
-            console.log(`Seleccionaste ${cantidad} producto`);
-        }
-
-        setCount(cantidad)
-    }
-
     // funcion para mostrar por consola la cantidad de productos que seleccione
     const AgregarCarrito = () => {
         onAdd(count)
     }
+    
 
     return (
         <>
