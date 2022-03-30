@@ -9,7 +9,7 @@ import Cart from './components/Cart/Cart'
 import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom'
 
 // context
-import { CartContext } from './context/CartContext'
+import CartContextProvider from './context/CartContext'
 
 
 // estilos
@@ -18,9 +18,8 @@ import './App.css'
 function App() {
 
   return (
-    <CartContext.Provider value={{
+    <CartContextProvider>
 
-    }}>
       <BrowserRouter >
           <div className="App">
             <NavBar />
@@ -39,8 +38,8 @@ function App() {
 
           </div>
       </BrowserRouter>
-    </CartContext.Provider>
 
+    </CartContextProvider>
   
   )
 }

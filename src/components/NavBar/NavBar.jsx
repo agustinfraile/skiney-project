@@ -12,7 +12,7 @@ import './NavBar.css'
 const NavBar = () => {
 return (
 <div>
-  <Navbar bg="light" variant="light">
+  <Navbar bg="light" variant="light" expand="lg">
 
     <Container>
       <NavLink to="/">
@@ -20,34 +20,35 @@ return (
         <Logo />
       </NavLink>
       
-      <Nav className="me-auto">
-        
+      <Navbar.Collapse id="basic-navbar-nav">
+        <Nav className="me-auto">
+          
 
 
-        <NavDropdown title="Productos" id="basic-nav-dropdown">
-          <NavLink to="categoria/gel">
-            <NavDropdown.Item href="#action/3.1">Gel</NavDropdown.Item>
+          <NavDropdown title="Productos" id="basic-nav-dropdown">
+            <NavLink to="categoria/gel">
+              <NavDropdown.Item href="#action/3.1">Gel</NavDropdown.Item>
+            </NavLink>
+
+            <NavLink to="categoria/limpieza">
+              <NavDropdown.Item href="#action/3.2">Limpieza</NavDropdown.Item>
+            </NavLink>
+          </NavDropdown>
+          
+          
+          <NavLink to="nosotros">
+            <Nav.Link>
+              Nosotros
+            </Nav.Link>
           </NavLink>
 
-          <NavLink to="categoria/limpieza">
-            <NavDropdown.Item href="#action/3.2">Limpieza</NavDropdown.Item>
-          </NavLink>
-        </NavDropdown>
-        
-        
-        <NavLink to="nosotros">
-          <Nav.Link>
-            Nosotros
-          </Nav.Link>
-        </NavLink>
+        </Nav>
 
-      </Nav>
-
+      </Navbar.Collapse>
     </Container>
-
-    <NavLink to="cart">
-        <CartWidget />
-    </NavLink>
+      <NavLink to="cart">
+          <CartWidget />
+      </NavLink>
 
   </Navbar>
 

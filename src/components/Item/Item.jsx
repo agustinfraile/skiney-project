@@ -19,7 +19,7 @@ return (
                     <Card.Title>{ prod.nombre }</Card.Title>
 
                     <Card.Text>
-                        ${prod.precio}
+                        ${ prod.precio }
                     </Card.Text>
 
                     <NavLink to = { `detalle/${prod.id}` }>
