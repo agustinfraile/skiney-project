@@ -1,9 +1,9 @@
 import { useState } from 'react';
 import React from 'react';
 import { Button, Card } from 'react-bootstrap';
+import { NavLink } from 'react-router-dom';
 
 import './ItemCount.css'
-import { NavLink } from 'react-router-dom';
 
 const ItemCount = ({initial, stock, onAdd}) => {
 
@@ -28,13 +28,12 @@ const ItemCount = ({initial, stock, onAdd}) => {
             setCount(count-1);
         }
     }
-    
+
     // funcion para mostrar por consola la cantidad de productos que seleccione
     const AgregarCarrito = () => {
         onAdd(count)
     }
     
-
     return (
         <>
             <Card.Body className='card-conteneor__count'>
@@ -43,15 +42,19 @@ const ItemCount = ({initial, stock, onAdd}) => {
                 <Button onClick={ handleCounterUp }>+</Button>
             </Card.Body>
 
-            <Card.Body>
-                <Button onClick={ AgregarCarrito } variant="primary">Agregar al carrito</Button>
-            </Card.Body>
+
+
+
 
             <Card.Body>
                 <NavLink to="/cart">
                     <Button variant="primary">Ir a pagar</Button>    
                 </NavLink>
             </Card.Body>
+
+            <Card.Body>
+                <Button onClick={ AgregarCarrito } variant="primary">Agregar al carrito</Button>
+            </Card.Body>  
         </>
     )
 }

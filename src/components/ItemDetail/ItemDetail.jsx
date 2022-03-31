@@ -8,13 +8,14 @@ import { Card } from "react-bootstrap"
 import './ItemDetail.css'
 
 
+
 const ItemDetail = ({ producto }) => {
 
     const [count, setCount] = useState(null)
     console.log(count)
 
 
-    const { agregarACart, cartList } = useCartContext()
+    const { agregarACart, cartList, isInCart } = useCartContext()
 
 
     const onAdd = (cantidad) => {
@@ -31,6 +32,8 @@ const ItemDetail = ({ producto }) => {
 
     console.log(cartList)
 
+    
+
     return (
         <div className="card-detalle">
             <Card.Img variant="top" src= {producto.foto} />
@@ -38,8 +41,15 @@ const ItemDetail = ({ producto }) => {
             <Card.Text>{ producto.detalle }</Card.Text>
             <Card.Title>{ `$${producto.precio}` }</Card.Title>
 
-            {/* contador y carrito */}
-            <ItemCount initial = {1} stock = {producto.stock} onAdd = {onAdd} />
+
+            {
+                isInCart(producto.id) ?
+                //contador y carrito 
+                <h3>Ya esta en el carrito</h3>
+                :
+                <ItemCount initial = {1} stock = {producto.stock} onAdd = {onAdd} /> 
+            }
+
         </div>
     )
 }
