@@ -4,8 +4,9 @@ import ItemCount from "../ItemCount/ItemCount"
 
 import { useCartContext } from "../../context/CartContext"
 
-import { Card } from "react-bootstrap"
+import { Button, Card } from "react-bootstrap"
 import './ItemDetail.css'
+import { Link } from "react-router-dom"
 
 
 
@@ -45,7 +46,9 @@ const ItemDetail = ({ producto }) => {
             {
                 isInCart(producto.id) ?
                 //contador y carrito 
-                <h3>Ya esta en el carrito</h3>
+                <Link to={"/cart"}>
+                    <Button>Ir al carrito</Button>
+                </Link>
                 :
                 <ItemCount initial = {1} stock = {producto.stock} onAdd = {onAdd} /> 
             }
