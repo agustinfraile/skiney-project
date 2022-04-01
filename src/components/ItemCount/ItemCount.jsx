@@ -45,16 +45,16 @@ const ItemCount = ({initial, stock, onAdd}) => {
 
 
 
+            <Card.Body>
+                <Button onClick={ AgregarCarrito } variant="primary">Agregar al carrito</Button>
+            </Card.Body>  
+
 
             <Card.Body>
                 <NavLink to="/cart">
                     <Button variant="primary">Ir a pagar</Button>    
                 </NavLink>
             </Card.Body>
-
-            <Card.Body>
-                <Button onClick={ AgregarCarrito } variant="primary">Agregar al carrito</Button>
-            </Card.Body>  
         </>
     )
 }
